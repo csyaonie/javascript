@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Box(name){
+				this.name=name;
+				this.do=function(){
+					console.log(this.name);
+				}
+			}
+			
+			var b1=new Box("dd");
+			var b2=new Box("ff");
+			
+			console.log(b1.do===b2.do);
+			b1.do();
+			b2.do();
+			
+		
+			function Dest(){
+				
+			}
+			Dest.prototype.name="我";
+			Dest.prototype.do=function(){
+				console.log(this.name);
+			}
+			var d1=new Dest();
+			var d2=new Dest();
+			console.log(d1.do===d2.do)
+			d1.do();
+			d2.do();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var o=new Object();
+			o.name="wo shi ni baba";
+			o.do=function(){
+				alert("fuck");
+			};
+			console.log(o);
+			console.log(o.__proto__);
+			
+			function jQuery(){
+				
+			}
+//			jQuery.prototype={
+//				constructor:jQuery,
+//				age:66,
+//				name:'wo'
+//			}
+			jQuery.prototype.age=66;
+			jQuery.prototype.name="wo";
+			jQuery.prototype.do=function (){
+				alert("jQuery")
+			}
+			var j=new jQuery();
+			console.log(j);
+			console.log(j.__proto__);
+			console.log(j instanceof jQuery)
+			
+			var m={sex:"男"};
+			console.log(m);
+			console.log(m.__proto__);
+			console.log(m.__proto__===m.constructor.prototype)
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Box(){
+				//this.name="guagua";
+			}
+			Box.prototype.name="li";
+			Box.prototype.do=function(){
+				console.log(this.name)
+			}
+			
+			var b1=new Box();
+			b1.do();
+			console.log(b1.hasOwnProperty('name'));//判断实例中是否存在
+			
+			console.log('name' in b1);//判断是否有该属性
+			
+			function judge(obj,pro){
+				if(pro in obj&&!obj.hasOwnProperty(pro)){
+					return true;
+				}else{
+					return false;
+				}
+				
+			}
+			console.log(judge(b1,'name'));//判断只有原形属性
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

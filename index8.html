@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Box(){
+				//实例方法
+				this.age=77;
+				this.extend=function(){
+					console.log("实例方法");
+				};
+				this.do=function(){
+					console.log("实例方法2");
+				}
+				
+			}
+			//工具方法
+			Box.extend=function(){
+				console.log("box.extend 工具方法");
+			}
+			//原型方法
+			Box.prototype.extend=function(){
+				console.log("prototype.extend 原型方法");
+			}
+			Box.prototype.age=66;
+			//对象的一些东西
+			var b1=new Box();
+			b1.name="gaga";
+			b1.extend();
+			b1.__proto__.extend();
+			Box.extend();
+			console.log(b1);
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
