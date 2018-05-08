@@ -7,14 +7,51 @@
 			var arr=[];
 			var item={name:'李香香'};
 			var number=3;
+			var str="gaga";
+			console.log(arr.__proto__);
 			arr.push(item);
 			arr.push(number);
+			arr.push(str);
 			console.log(arr);
-			console.log(typeof arr.__proto__);
-			function aa(){
-				
+			arr.reverse();
+			console.log(arr);
+			arr.pop();
+			console.log(arr);
+			console.log(arr.includes(3));
+			
+			//find 找到第一个匹配的值 传入的函数放回true或者false
+			function isBigEnough(element) {
+			    return element >= 15;
 			}
-			console.log(typeof arr);
+			var ret1 = [12, 5, 8,16, 130, 44].find(isBigEnough);
+			console.log(ret1);
+			var objArr = [{id:1, name:'jiankian'}, {id:23, name:'anan'}, {id:233, name:'superme'}, {id:233, name:'jobs'}, {id:288, name:'bill', age:89}, {id:333}] ;
+			var ret2 = objArr.find((v) => {
+			    return v.id == 233;
+			});
+			console.log(ret2);
+			
+			//filter
+			const isBigEnough2 = value => value >= 10;
+			let [...spread]= [12, 5, 8, 130, 44];
+			console.log(spread);
+			let filtered = spread.filter(isBigEnough2);
+			console.log(filtered);
+			
+			//map
+			const isBigEnough3 = value =>{
+				if(value >= 10){
+					return value;
+				}
+			
+			
+			}
+			let [...spread2]= [12, 5, 8, 130, 44];
+			console.log(spread2);
+			let filtered2 = spread2.map(isBigEnough3);
+			console.log(filtered2);
+	
+			
 		</script>
 	</head>
 	<body>
