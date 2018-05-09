@@ -38,11 +38,26 @@
 			b2.extend();
 			console.log(b1);
 			
-			//1大体上分为实例方法和静态方法  实例无法调用静态方法
+			//1大体上分为1.实例方法2.静态方法3.内部方法  实例无法调用静态方法 和内部方法
 			//2实例方法还可以分为三类  1原型方法 2this方法 3具体实例方法
 			//3实例调用方法的顺序 具体实例方法优先级最高 其次是this方法 最后是原型方法
+			//五种定义方法的方式
 			
-			
+			var BaseClass = function() {  
+			    var method1 = function() {  
+			        console.log("Internal method1");  
+			    };  
+			    var method2 = function() {  
+			        console.log("call Internal method2");  
+			        method1();  
+			    };  
+			    this.method3 = function(){  
+			        method2();  
+			    }  
+			};  
+			var instance1 = new BaseClass();  
+			//instance1.method1();// 会报错，因为method1是BaseClass中定义的内部变量，作用域只有在内部可见（闭包）  
+			instance1.method3();//会先后调用method2和method1  
 			
 		</script>
 	</head>
