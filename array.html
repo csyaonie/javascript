@@ -20,6 +20,7 @@
 			console.log(arr.includes(3));
 			
 			//find 找到第一个匹配的值 传入的函数放回true或者false
+			console.log("===find===");
 			function isBigEnough(element) {
 			    return element >= 15;
 			}
@@ -32,6 +33,7 @@
 			console.log(ret2);
 			
 			//filter
+			console.log("===filter===");
 			const isBigEnough2 = value => value >= 10;
 			let [...spread]= [12, 5, 8, 130, 44];
 			console.log(spread);
@@ -39,6 +41,7 @@
 			console.log(filtered);
 			
 			//map
+			console.log("===map===");
 			const isBigEnough3 = value =>{
 				if(value >= 10){
 					return value;
@@ -50,6 +53,27 @@
 			console.log(spread2);
 			let filtered2 = spread2.map(isBigEnough3);
 			console.log(filtered2);
+			
+			//fill
+			console.log("===fill===");
+			var array1 = [1, 2, 3, 4];
+			console.log(array1.fill(0, 2, 4));
+			
+			//every
+			console.log("===every===");
+			function isBigEnough4(element, index, array) {
+			  return (element >= 10);
+			}
+			var passed = [12, 5, 8, 130, 44].every(isBigEnough4);
+			console.log(passed);
+			passed = [12, 54, 18, 130, 44].every(isBigEnough4);
+			console.log(passed);
+			
+			//concat
+			console.log("===concat===");
+			var array1 = ['a', 'b', 'c'];
+			var array2 = ['d', 'e', 'f'];
+			console.log(array1.concat(array2));
 	
 			
 		</script>

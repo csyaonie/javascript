@@ -8,7 +8,7 @@
 				//实例方法
 				this.age=77;
 				this.extend=function(){
-					console.log("实例方法");
+					console.log("b1.extend this实例方法");
 				};
 				this.do=function(){
 					console.log("实例方法2");
@@ -17,7 +17,7 @@
 			}
 			//工具方法
 			Box.extend=function(){
-				console.log("box.extend 工具方法");
+				console.log("Box.extend 工具方法（静态方法）");
 			}
 			//原型方法
 			Box.prototype.extend=function(){
@@ -26,11 +26,21 @@
 			Box.prototype.age=66;
 			//对象的一些东西
 			var b1=new Box();
+			var b2=new Box();
+			//具体实例方法
+			b2.extend=function(){
+				console.log("b2.extend具体实例方法")
+			}
 			b1.name="gaga";
 			b1.extend();
 			b1.__proto__.extend();
 			Box.extend();
+			b2.extend();
 			console.log(b1);
+			
+			//1大体上分为实例方法和静态方法  实例无法调用静态方法
+			//2实例方法还可以分为三类  1原型方法 2this方法 3具体实例方法
+			//3实例调用方法的顺序 具体实例方法优先级最高 其次是this方法 最后是原型方法
 			
 			
 			
