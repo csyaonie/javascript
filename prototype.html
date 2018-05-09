@@ -30,7 +30,13 @@
 			console.log(b1.constructor.prototype===Box.prototype);
 			
 			//总结
+			//因为
 			console.log(b1.__proto__.constructor===Box);
+			//且
+			console.log(Box===Box.prototype.constructor);
+			//所以
+			console.log(b1.__proto__.constructor===Box.prototype.constructor);
+			//得出
 			console.log(b1.__proto__===Box.prototype);
 			
 			
