@@ -5,10 +5,45 @@
 		<title></title>
 		<script type="text/javascript">
 			let str="ABC";
+			//常用的就这10个方法
+			console.log(str.toLowerCase());
 			console.log(str);
 			console.log(String.prototype);
 			console.log(str.charAt(0));
 			console.log(str.charCodeAt(0));
+			str = "To be, or not to be, that is the question.";
+			console.log( str.endsWith("question.") );  // true
+			console.log( str.endsWith("to be") );      // false
+			console.log( str.endsWith("to be", 19) );  // true
+			console.log( str.endsWith("To be", 5) );   // true
+			console.log( str.startsWith("To be"));
+			console.log('Blue Whale'.includes('Blue')); // returns false
+			console.log("Blue Whale".indexOf("Blue"));     // returns  0
+			console.log("Blue Whale".indexOf("Blute"));    // returns -1
+			console.log("Blue Whale".indexOf("Whale", 0)); // returns  5
+			
+			str="123456789";
+			console.log(str.substr(1,1));//2
+			console.log(str.substring(1,2));//2
+			
+			
+			//那道题 woshinibaba
+			let s="wo shi ni baba";
+			let arr=s.split("");
+			let set=new Set(arr);
+			set.forEach(item=>{
+				let count=0;
+				arr.map(i=>{
+					if(i===item){
+						count++;
+					}
+				})
+				if(item!==" "){
+					console.log(`${item}:${count}`);
+				}
+				
+			});
+		
 		</script>
 	</head>
 	<body>
