@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			let arr=[1,2,3,'name',{age:6}];
+			let map=new Map();
+			console.log(map);
+			//set get has size clear delete
+			map.set('name','嘎嘎');
+			map.set('age',66)
+			console.log(map);
+			console.log(map.get('name'));
+			map.delete('name');
+			console.log(map.has('name'));
+			console.log(map.size);
+			map.clear();
+			console.log(map.size);
+			//forEach keys values
+			console.log("====");
+			map.set('name','liguagua');
+			map.set('age',66);
+			map.set('height',50);
+			
+			map.forEach((value,key,map)=>{
+				console.log(`m[${key}] = ${value}`);
+			});
+			const keys=map.keys();
+			const values=map.values();
+			const entries=map.entries();
+			console.log(keys);
+			for(let k of keys){
+				console.log(k);
+			}
+			for(let v of values){
+				console.log(v);
+			}
+			
+			//
+			console.log('===entries===');
+			for(let e of entries){
+				console.log(e);
+				console.log(e.length);//e这个时候是一个数组
+			}
+			console.log('===entries key value===');
+			for (let [key, value] of entries) {
+			  console.log(key,value);//然而并不能用
+			}
+			console.log('===map===');
+			for (let m of map) {
+			  console.log(m);//我是一个数组
+			  console.log(m.length);
+			}
+			console.log('===map key value===');
+			for (let [key, value] of map) {
+			  console.log(key,value);
+			}
+			
+			console.log("====")
+			for(let a of arr){
+				console.log(a);
+			}
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

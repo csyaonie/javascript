@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			const set1 = new Set([1, 2, 3, 4, 5]);
+			//add has size delete clear 
+			console.log(set1.has(1));
+			// expected output: true
+			set1.add(6);
+			set1.delete(6)
+			console.log(set1.has(6));
+			set1.clear();
+			console.log(set1.size);
+			
+			//forEach values
+			const set2 = new Set([1, 2, 3, 4, 5]);
+			set2.forEach(item=>{
+				console.log(item);
+			});
+			const vs=set2.values();
+			for(let v of vs){
+				console.log(v);
+			}
+			for(let v of set2){
+				console.log(v);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
