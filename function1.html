@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//bind
+			var module = {
+			  x: 42,
+			  getX: function() {
+			    return this.x;
+			  }
+			}
+			
+			var unboundGetX = module.getX;
+			console.log(unboundGetX()); // The function gets invoked at the global scope
+			// expected output: undefined
+			
+			var boundGetX = unboundGetX.bind(module);
+			console.log(boundGetX());
+			// expected output: 42
+			
+			var unboundGetX2 = module.getX();
+			console.log(unboundGetX2); // The function gets invoked at the global scope
+			// expected output: 42
+			
+			//call 若干参数  apply 一个数组作为参数
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

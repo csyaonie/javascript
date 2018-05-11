@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var obj = { x: 1, y: 2 };
+		Reflect.deleteProperty(obj, "x"); // true
+		obj; // { y: 2 }
+		console.log(obj);
+		
+		var arr = [1, 2, 3, 4, 5];
+		Reflect.deleteProperty(arr, "3"); // true
+		arr; // [1, 2, 3, , 5]
+		console.log(arr);
+		
+		var reg=new RegExp();
+		var o=new Object();
+		var a=new Array();
+		console.log(o);
+		console.log('reg',Reflect.ownKeys(reg));
+		console.log('arr',Reflect.ownKeys(a));
+		console.log(Reflect.getPrototypeOf(o));
+	</script>
+	<body>
+	</body>
+</html>
