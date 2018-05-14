@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj = { a: 1 };
+			var copy = Object.assign({}, obj);
+			console.log(copy); // { a: 1 }
+
+			// Deep Clone
+			var obj1 = { a: 0 , b: { c: 0}};
+			let obj3 = JSON.parse(JSON.stringify(obj1));
+		    obj1.a = 4;
+		    obj1.b.c = 4;
+		    console.log(JSON.stringify(obj3)); // { a: 0, b: { c: 0}}
+		  
+		    //创建一个可写的,可枚举的,可配置的属性p  enumerable writable configurable
+			o2 = Object.create({}, {
+			  p: {
+			    value: 42, 
+			    writable: true,//是否可写
+			    enumerable: false,//是否可用for in 遍历
+			    configurable: true //是否可删除
+			  } 
+			});
+			//delete o2.p;
+			console.log(o2.p);
+			console.log("===Object.keys===");//因为不可枚举 所以是空
+			console.log(Object.keys(o2));
+			//get set 好爽啊 原来这就是访问器
+			o3=Object.create({},{
+				bar: {
+				    configurable: false,
+				    writable: true,
+//				    get: function() { return 10 },
+//				    set: function(value) {
+//				      console.log("Setting `o.bar` to", value);
+//				    }
+				}
+			});
+			o3.bar=42;
+			console.log(o3.bar);
+			
+			//defineProperties defineProperty
+			var o4 = {name:666};
+			Object.defineProperties(o4, {
+			  'property1': {
+			    value: "world",
+			    writable: true,
+			    enumerable:true,
+			    configurable:true
+			  },
+			  'property2': {
+			    value: 'Hello',
+			    writable: false
+			  },
+			  'name':{
+			  	value:555,
+			  	//writable:false, 注意重写的话 如果你不去修改 读写 就会按原来的
+			  }
+			  
+			  // etc. etc.
+			});
+			o4.name='dd'
+			console.log(o4);
+			console.log(o4.property2)
+			
+			console.log("entries")
+			// getFoo is property which isn't enumerable
+			const myObj = Object.create({}, { getFoo: { value() { return this.foo; } } });
+			myObj.foo = 'bar';
+			console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
+			
+			
+			o = { bar: 42 };
+			d = Object.getOwnPropertyDescriptor(o, "bar");
+			console.log(d);
+			
+
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
