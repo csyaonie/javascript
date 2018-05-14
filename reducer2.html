@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>手动实现redux</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		const reducer_counter = (state = 0, action)=> {
+			switch (action.type) {
+				case 'add':
+					return state + 1;
+				default:
+					return state;
+			}
+		}
+		const createStore=(reducer)=>{
+			let state;
+			let listeners=[];
+			const getState=()=>state;
+			const dispatch=(action)=>{
+				state=reducer(state,action);
+				listeners.forEach(listener=>listener());
+			}
+			const subscript=(listener)=>listeners.push(listener);
+			dispatch({});
+			return {getState,dispatch,subscript};
+		}
+		const store=createStore(reducer_counter);
+		const render=()=>{
+			document.body.innerText=store.getState();
+		}
+		store.subscript(render);
+		render();
+		document.addEventListener('click',()=>{
+			store.dispatch({type:'add'});
+		});
+	</script>
+</html>
