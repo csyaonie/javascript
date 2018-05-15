@@ -30,7 +30,8 @@
 			console.log(b1.constructor.prototype===Box.prototype);
 			
 			//总结
-			console.log(Box.prototype==b1.__proto__)
+			//console.log(Box.prototype==b1.__proto__)
+			console.log(Box===Box.prototype.constructor);//这个是最根本原因 吧constructor赋值给自己
 			//因为
 			console.log(b1.__proto__.constructor===Box);
 			//且

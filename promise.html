@@ -3,6 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script type="text/javascript">
+			var promise1 = new Promise(function(resolve, reject) {
+			  setTimeout(resolve, 3000, 'foo');
+			});
+			console.log(promise1);
+			
+			promise1.then(function(msg){
+				alert(msg);
+			});
+		
+
+		</script>
 	</head>
 	<body>
 	</body>
