@@ -1,0 +1,7 @@
+#Tue Oct 24 15:06:50 CST 2017
+cn.com.pansky.xmgt.xmlbean.Gt_qldkResp=cn.com.pansky.xmgt.xmlbean.descriptors.Gt_qldkRespDescriptor
+cn.com.pansky.xmgt.xmlbean.Gt_qldkPdResp=cn.com.pansky.xmgt.xmlbean.descriptors.Gt_qldkPdRespDescriptor
+cn.com.pansky.xmgt.xmlbean.Gt_qldkReq=cn.com.pansky.xmgt.xmlbean.descriptors.Gt_qldkReqDescriptor
+cn.com.pansky.xmgt.xmlbean.Gt_qldkPdReq=cn.com.pansky.xmgt.xmlbean.descriptors.Gt_qldkPdReqDescriptor
+cn.com.pansky.xmgt.xmlbean.ResultList=cn.com.pansky.xmgt.xmlbean.descriptors.ResultListDescriptor
+cn.com.pansky.xmgt.xmlbean.ObjectList=cn.com.pansky.xmgt.xmlbean.descriptors.ObjectListDescriptor

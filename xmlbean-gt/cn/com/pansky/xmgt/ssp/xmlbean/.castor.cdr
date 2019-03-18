@@ -1,0 +1,17 @@
+#Mon Aug 14 14:23:59 CST 2017
+cn.com.pansky.xmgt.ssp.xmlbean.BuyerList=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.BuyerListDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.ClfZkxx=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.ClfZkxxDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.Fj_lb=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.Fj_lbDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.SellerList=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.SellerListDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.Seller=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.SellerDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.ClfJyxxcjBody=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.ClfJyxxcjBodyDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.Gt_fjscReq=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.Gt_fjscReqDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.ClfJyjbxx=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.ClfJyjbxxDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.ClfJyjmsqhpxx=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.ClfJyjmsqhpxxDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.Gt_tyfhResp=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.Gt_tyfhRespDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.InvokeResult=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.InvokeResultDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.JBXXK=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.JBXXKDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.Fcj_clf_getFcjSjxxReq=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.Fcj_clf_getFcjSjxxReqDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.Fcj_clf_jyxxcjResp=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.Fcj_clf_jyxxcjRespDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.ClfJysfxx=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.ClfJysfxxDescriptor
+cn.com.pansky.xmgt.ssp.xmlbean.Buyer=cn.com.pansky.xmgt.ssp.xmlbean.descriptors.BuyerDescriptor
